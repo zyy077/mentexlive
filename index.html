@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mentex</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background: #000;
+    color: #eee;
+    font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Texto pequeno "vyyz" no canto inferior direito */
+  .vyyz-tag {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: #00ff00; /* verde neon */
+    opacity: 0.6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    user-select: none;
+    font-weight: 700;
+    filter: drop-shadow(0 0 6px #00ff00);
+    z-index: 10;
+  }
+
+  /* Título Mentex com efeito neon */
+  h1.title {
+    font-size: 6rem;
+    color: #00ff00;
+    text-transform: lowercase;
+    letter-spacing: 0.15em;
+    user-select: none;
+    text-align: center;
+    text-shadow:
+      0 0 5px #00ff00,
+      0 0 10px #00ff00,
+      0 0 20px #00ff00,
+      0 0 40px #00ff00,
+      0 0 80px #00ff00,
+      0 0 90px #00ff00,
+      0 0 100px #00ff00,
+      0 0 150px #00ff00;
+    animation: flicker 3s infinite alternate;
+  }
+
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+      text-shadow:
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        0 0 20px #00ff00,
+        0 0 40px #00ff00,
+        0 0 80px #00ff00,
+        0 0 90px #00ff00,
+        0 0 100px #00ff00,
+        0 0 150px #00ff00;
+    }
+    20%, 22%, 24%, 55% {
+      opacity: 0.4;
+      text-shadow: none;
+    }
+  }
+
+  /* Menu simples */
+  nav {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    color: #0ff; /* azul elétrico */
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 15px;
+    border-radius: 8px;
+    user-select: none;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px #0ff);
+  }
+
+  nav a:hover {
+    color: #fff;
+    background: #0ff;
+    filter: drop-shadow(0 0 20px #0ff);
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="vyyz-tag">vyyz</div>
+  <h1 class="title">mentex</h1>
+  <nav>
+    <a href="index.html">home</a>
+    <a href="sobre.html">sobre</a>
+    <a href="contato.html">contato</a>
+    <a href="glossario.html">glossário</a>
+  </nav>
+</body>
+</html>
