@@ -3,163 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentex</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-p1b+5Yy7eGRgi2NmCFDxEMV8QhfwN9i4J6npRe3k7n61E5Yiwz6KGLHPuQowP6W5+Vcg3u5kbfY4aVQVfU5Yxg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <title>Mentex Live</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Open Sans', sans-serif;
-      background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+    body {
+      margin: 0;
+      background-color: #000;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      min-height: 100vh;
-    }
-
-    /* Top logo exclusive Mentex */
-    .top-logo {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      font-family: 'Great Vibes', cursive;
-      color: white;
-      font-size: 2.8rem;
-      font-weight: 700;
-      user-select: none;
-      z-index: 10;
-    }
-
-    .top-logo small {
+      align-items: center;
+      color: #fff;
       font-family: Arial, sans-serif;
-      font-size: 1rem;
-      color: #3db64a;
-      display: block;
-      margin-bottom: -10px;
-      font-weight: 600;
-      text-transform: lowercase;
-      letter-spacing: 1px;
     }
-
-    /* Centro texto "ESCOLHA UMA CATEGORIA" e linha */
+    header {
+      padding: 20px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0ff; /* Azul elétrico */
+    }
     main {
-      flex-grow: 1;
+      flex: 1;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 20px;
-      text-align: center;
-      padding: 0 20px;
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
     }
-
-    main h1 {
-      font-weight: 700;
-      font-size: 1.3rem;
-      letter-spacing: 1.3px;
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0ff;
     }
-
-    main hr {
-      width: 250px;
-      border: 1.5px solid white;
-      margin: 0 auto;
-      border-radius: 3px;
-    }
-
-    /* Rodapé com logo e live */
     footer {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 15px 20px;
-      gap: 15px;
-      font-weight: 700;
-      font-size: 1.7rem;
-      color: #3db64a;
-      user-select: none;
-    }
-
-    footer .live {
-      font-size: 1.1rem;
-      color: white;
-      font-weight: normal;
-    }
-
-    /* Ícones redes sociais no centro rodapé */
-    .social-icons {
-      position: fixed;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 25px;
-      font-size: 1.6rem;
-      color: white;
-      user-select: none;
-    }
-
-    .social-icons a {
-      color: white;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #3db64a;
-    }
-
-    /* Ajuste responsivo */
-    @media (max-width: 480px) {
-      main hr {
-        width: 150px;
-      }
-
-      main h1 {
-        font-size: 1.1rem;
-      }
-
-      footer {
-        font-size: 1.4rem;
-      }
-      .social-icons {
-        font-size: 1.2rem;
-        gap: 18px;
-      }
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <div class="top-logo">
-    <small>exclusive</small>Mentex
-  </div>
-
+  <header>Mentex Live</header>
   <main>
-    <h1>ESCOLHA UMA CATEGORIA</h1>
-    <hr />
+    <img src="download (1).jpg" alt="Imagem Mentex" />
   </main>
-
-  <footer>
-    MENTEX <span class="live">live</span>
-  </footer>
-
-  <div class="social-icons">
-    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-  </div>
+  <footer>© 2025 Mentex</footer>
 </body>
 </html>
+
 
