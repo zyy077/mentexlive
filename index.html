@@ -1,124 +1,165 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mentex</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentex</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-p1b+5Yy7eGRgi2NmCFDxEMV8QhfwN9i4J6npRe3k7n61E5Yiwz6KGLHPuQowP6W5+Vcg3u5kbfY4aVQVfU5Yxg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
-  /* Reset básico */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background: #000;
-    color: #eee;
-    font-family: 'Orbitron', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
-    position: relative;
-  }
-
-  /* Texto pequeno "vyyz" no canto inferior direito */
-  .vyyz-tag {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 14px;
-    color: #00ff00; /* verde neon */
-    opacity: 0.6;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    user-select: none;
-    font-weight: 700;
-    filter: drop-shadow(0 0 6px #00ff00);
-    z-index: 10;
-  }
-
-  /* Título Mentex com efeito neon */
-  h1.title {
-    font-size: 6rem;
-    color: #00ff00;
-    text-transform: lowercase;
-    letter-spacing: 0.15em;
-    user-select: none;
-    text-align: center;
-    text-shadow:
-      0 0 5px #00ff00,
-      0 0 10px #00ff00,
-      0 0 20px #00ff00,
-      0 0 40px #00ff00,
-      0 0 80px #00ff00,
-      0 0 90px #00ff00,
-      0 0 100px #00ff00,
-      0 0 150px #00ff00;
-    animation: flicker 3s infinite alternate;
-  }
-
-  @keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      opacity: 1;
-      text-shadow:
-        0 0 5px #00ff00,
-        0 0 10px #00ff00,
-        0 0 20px #00ff00,
-        0 0 40px #00ff00,
-        0 0 80px #00ff00,
-        0 0 90px #00ff00,
-        0 0 100px #00ff00,
-        0 0 150px #00ff00;
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
     }
-    20%, 22%, 24%, 55% {
-      opacity: 0.4;
-      text-shadow: none;
+
+    body, html {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1471&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
     }
-  }
 
-  /* Menu simples */
-  nav {
-    margin-top: 30px;
-    display: flex;
-    gap: 30px;
-  }
+    /* Top logo exclusive Mentex */
+    .top-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-family: 'Great Vibes', cursive;
+      color: white;
+      font-size: 2.8rem;
+      font-weight: 700;
+      user-select: none;
+      z-index: 10;
+    }
 
-  nav a {
-    color: #0ff; /* azul elétrico */
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding: 10px 15px;
-    border-radius: 8px;
-    user-select: none;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 0 5px #0ff);
-  }
+    .top-logo small {
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      color: #3db64a;
+      display: block;
+      margin-bottom: -10px;
+      font-weight: 600;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+    }
 
-  nav a:hover {
-    color: #fff;
-    background: #0ff;
-    filter: drop-shadow(0 0 20px #0ff);
-    cursor: pointer;
-  }
-</style>
+    /* Centro texto "ESCOLHA UMA CATEGORIA" e linha */
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    main h1 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1.3px;
+    }
+
+    main hr {
+      width: 250px;
+      border: 1.5px solid white;
+      margin: 0 auto;
+      border-radius: 3px;
+    }
+
+    /* Rodapé com logo e live */
+    footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 20px;
+      gap: 15px;
+      font-weight: 700;
+      font-size: 1.7rem;
+      color: #3db64a;
+      user-select: none;
+    }
+
+    footer .live {
+      font-size: 1.1rem;
+      color: white;
+      font-weight: normal;
+    }
+
+    /* Ícones redes sociais no centro rodapé */
+    .social-icons {
+      position: fixed;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 25px;
+      font-size: 1.6rem;
+      color: white;
+      user-select: none;
+    }
+
+    .social-icons a {
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #3db64a;
+    }
+
+    /* Ajuste responsivo */
+    @media (max-width: 480px) {
+      main hr {
+        width: 150px;
+      }
+
+      main h1 {
+        font-size: 1.1rem;
+      }
+
+      footer {
+        font-size: 1.4rem;
+      }
+      .social-icons {
+        font-size: 1.2rem;
+        gap: 18px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="vyyz-tag">vyyz</div>
-  <h1 class="title">mentex</h1>
-  <nav>
-    <a href="index.html">home</a>
-    <a href="sobre.html">sobre</a>
-    <a href="contato.html">contato</a>
-    <a href="glossario.html">glossário</a>
-  </nav>
+  <div class="top-logo">
+    <small>exclusive</small>Mentex
+  </div>
+
+  <main>
+    <h1>ESCOLHA UMA CATEGORIA</h1>
+    <hr />
+  </main>
+
+  <footer>
+    MENTEX <span class="live">live</span>
+  </footer>
+
+  <div class="social-icons">
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+  </div>
 </body>
 </html>
+
